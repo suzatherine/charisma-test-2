@@ -1,0 +1,14 @@
+# Node-related
+node_modules/*
+npm-debug.log
+yarn-error.log
+
+# Build-related
+dist/*
+test/dist/*
+.parcel-cache
+
+# IDE
+.vscode/*
+
+.DS_Store

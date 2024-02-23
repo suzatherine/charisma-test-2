@@ -1,0 +1,67 @@
+{
+  "name": "@charisma-ai/sdk",
+  "version": "4.0.3",
+  "description": "Charisma.ai SDK for Javascript (browser)",
+  "source": "src/index.ts",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "repository": "https://github.com/charisma-ai/charisma-sdk-js",
+  "author": "Charisma Entertainment Ltd <hello@charisma.ai> (https://charisma.ai)",
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "character",
+    "npc",
+    "virtual beings",
+    "voice"
+  ],
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build": "tsc && swc src -d dist",
+    "cm": "git-cz",
+    "lint": "eslint --fix --ext js,ts,tsx .",
+    "prebuild": "rimraf dist",
+    "prepublish": "pnpm run build",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "@charisma-ai/sdk": "4.0.5-alpha",
+    "colyseus.js": "^0.14.13",
+    "eventemitter3": "^5.0.1",
+    "jwt-decode": "^3.1.2",
+    "p-queue": "^7.3.4"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.62",
+    "@swc/core": "^1.3.57",
+    "@typescript-eslint/eslint-plugin": "^5.59.5",
+    "@typescript-eslint/parser": "^5.59.5",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.40.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "parcel": "2.0.0-nightly.1296",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "semantic-release": "^21.0.2",
+    "typescript": "^5.0.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "@parcel/resolver-default": {
+    "packageExports": true
+  }
+}
